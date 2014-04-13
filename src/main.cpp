@@ -1,7 +1,0 @@
-class Field {
-
-}
-
-int main(){
-
-}
