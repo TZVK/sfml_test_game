@@ -1,8 +1,12 @@
 #include "View.h"
 
-View::View() {
+View::View(Controller &controller) {
     window.create(sf::VideoMode(600,300), "TicTacToe", sf::Style::Titlebar | sf::Style::Close); 
+    this->controller = &controller;
     init(); 
+}
+
+View::View(){
 }
 
 View::~View() {

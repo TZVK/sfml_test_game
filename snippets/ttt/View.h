@@ -2,15 +2,21 @@
 #include <SFML/Graphics.hpp>
 #include <cstdlib>
 #include <iostream>
+
+class Controller;
+
 class View {
     private:
         sf::RenderWindow window;
         sf::Font font;
+        Controller *controller;
         std::vector<sf::Text> textContainer;
         std::vector<sf::Sprite> spriteContainer;
         std::vector<sf::Texture> textureContainer;
-    public:
         View();
+    public:
+        
+        View(Controller &controller);
         ~View();
         
         void init();

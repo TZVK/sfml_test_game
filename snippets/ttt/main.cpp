@@ -3,6 +3,7 @@
 //#include "Field.h" 
 //#include <cstring>
 //#include <cstdlib>
+#include "Controller.h"
 #include "View.h"
 /*
 void drawEverything(sf::RenderWindow &window){
@@ -20,7 +21,9 @@ void writeOnPosition(std::string, unsigned int column, unsigned int line) {
 */
 int main()
 {  
-    View view;
-    view.draw();
+    Controller controller; //should init Game
+    View view(controller);
+    controller.registerView(view);
+    controller.run();
    return 0;
 }
