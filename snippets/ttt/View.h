@@ -1,7 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include <cstdlib>
 #include <iostream>
+#include <vector>
+#include <string>
 
 class Controller;
 

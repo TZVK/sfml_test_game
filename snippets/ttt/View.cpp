@@ -24,11 +24,11 @@ bool View::load(T &element, std::string location){
 }
 //Put text in Container and print it.
 void View::init() {
-    while(!load(font, "data\\lucon.ttf")) 
-        ;
+    (!load(font, "data\\lucon.ttf")); 
+        
     sf::Texture texture; 
-   while(!load(texture, "data\\testSprite.png"))
-        ;
+   (!load(texture, "data\\testSprite.png"));
+        
     textureContainer.push_back(texture); 
 
     sf::Sprite sprite;
