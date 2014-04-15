@@ -13,10 +13,14 @@ class Game {
     private:
        Field field;
        std::vector<Player> players;
-      
+       int playerTurn;
+
     public:
        Game();
+       Game(int x, int y);
        ~Game();
-       void nextPlayer(); 
-       Player PlayerWon();
+       inline void nextPlayer() { playerTurn = (playerTurn+1) % players.size(); }
+       inline Player getPlayer(){ return players.at(playerTurn);}
+       Player playerWon();
+       void initPlayers();
 };

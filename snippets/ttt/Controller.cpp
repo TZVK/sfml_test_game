@@ -2,14 +2,15 @@
 
 Controller::Controller() {
 //Initialize Game 
+//    view = View(this);
 }
 
 Controller::~Controller() {
 
 }
 
-void Controller::registerView(View &view) { 
-    this->view = &view;
+void Controller::registerView(std::shared_ptr<View> view) { 
+    this->view = view;
 }
 
 void Controller::run() {
@@ -17,5 +18,5 @@ void Controller::run() {
 }
 
 void Controller::getCommand() {
-
+//Command_Event from GuI
 }
