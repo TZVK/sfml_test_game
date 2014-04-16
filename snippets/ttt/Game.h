@@ -23,4 +23,5 @@ class Game {
        inline Player getPlayer(){ return players.at(playerTurn);}
        Player playerWon();
        void initPlayers();
+       inline Sign getSignAt(int x, int y) { return field.getSignAt(x,y) ;}
 };

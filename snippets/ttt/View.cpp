@@ -2,7 +2,7 @@
 #include <iostream>
 
 View::View(std::shared_ptr<Controller> controller) {
-    window.create(sf::VideoMode(600,300), "TicTacToe", sf::Style::Titlebar | sf::Style::Close); 
+    window.create(sf::VideoMode(90,90), "TicTacToe", sf::Style::Titlebar | sf::Style::Close); 
     this->controller = controller;
     init(); 
 }
@@ -69,8 +69,9 @@ void View::draw() {
        
        //window.draw(textContainer[0]);
        //window.draw(spriteContainer[0]); 
-       drawSignField(signVec); 
-       window.display();
+       //drawSignField(signVec); 
+       drawSignFieldFromController();
+        window.display();
     }
  
     
@@ -82,6 +83,17 @@ void View::drawSignField(std::vector<Sign> signVec){
     for (int j = 0; j < 3;j++){
     spriteMap.at(signVec.at(i*3+j)).setPosition(j*DISTANCE,i*DISTANCE);
     window.draw(spriteMap.at(signVec.at(i*3+j)));
+    }
+    }
+    
+}
+
+void View::drawSignFieldFromController(){
+    const int DISTANCE = 30;
+    for (int i = 0; i < 3;i++){
+    for (int j = 0; j < 3;j++){
+    spriteMap.at(controller->getSignAt(i,j)).setPosition(j*DISTANCE,i*DISTANCE);
+    window.draw(spriteMap.at(controller->getSignAt(i,j)));
     }
     }
     

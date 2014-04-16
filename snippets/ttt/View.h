@@ -42,4 +42,5 @@ class View {
         void draw();
         void shit();
         void drawSignField(std::vector<Sign> signVec);
+        void drawSignFieldFromController();
 };

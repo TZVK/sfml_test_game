@@ -21,3 +21,5 @@ void Controller::run() {
 void Controller::getCommand() {
 //Command_Event from GuI
 }
+
+
