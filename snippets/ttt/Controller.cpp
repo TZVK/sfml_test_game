@@ -3,6 +3,7 @@
 Controller::Controller() {
 //Initialize Game 
 //    view = View(this);
+this->game = Game(3,3);
 }
 
 Controller::~Controller() {

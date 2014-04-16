@@ -5,7 +5,6 @@
 
 class Controller {
     private:
-        //View view;
         std::shared_ptr<View> view;
         Game game;
     public:

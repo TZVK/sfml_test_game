@@ -16,7 +16,7 @@ class View {
         sf::Font font;
         std::shared_ptr<Controller> controller;
         std::vector<sf::Text> textContainer;
-        std::vector<sf::Sprite> spriteContainer;
+        //std::vector<sf::Sprite> spriteContainer;
         std::vector<sf::Texture> textureContainer;
         View();
     public:
@@ -41,4 +41,5 @@ class View {
 
         void draw();
         void shit();
+        void drawSignField(std::vector<Sign> signVec);
 };
