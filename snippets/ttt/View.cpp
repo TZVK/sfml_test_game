@@ -1,6 +1,6 @@
 #include "View.h"
 #include <iostream>
-
+#include "Controller.h"
 View::View(std::shared_ptr<Controller> controller) {
     window.create(sf::VideoMode(90,90), "TicTacToe", sf::Style::Titlebar | sf::Style::Close); 
     this->controller = controller;

@@ -3,8 +3,8 @@
 //#include "Field.h" 
 //#include <cstring>
 //#include <cstdlib>
-#include "Controller.h"
 #include "View.h"
+#include "Controller.h"
 /*
 void drawEverything(sf::RenderWindow &window){
     for (std::vector<sf::Text>::iterator iter = shapeContainer.begin(); iter != shapeContainer.end();iter++)
