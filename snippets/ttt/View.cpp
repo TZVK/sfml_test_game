@@ -55,6 +55,7 @@ void View::init() {
 void View::draw() {
     std::vector<Sign> signVec (9,Sign::EMPTY);
     signVec.at(4) = Sign::X;
+    signVec.at(8) = Sign::O;
     signVec.at(5) = Sign::O;
     while (window.isOpen())
     {
