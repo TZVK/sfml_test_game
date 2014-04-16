@@ -21,9 +21,11 @@ void writeOnPosition(std::string, unsigned int column, unsigned int line) {
 */
 int main()
 {  
-    Controller controller; //should init Game
-    View view(std::make_shared<Controller>(controller));
-    controller.registerView(std::make_shared<View>(view));
-    controller.run();
+    std::shared_ptr<Controller> controller = std::make_shared<Controller>(); //should init Game
+    //std::shared_ptr<View> view;
+    //View view(std::make_shared<>(controller));
+    //controller->registerView(view);
+    controller->registerView(std::make_shared<View>(controller));
+    controller->run();
    return 0;
 }

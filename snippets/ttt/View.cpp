@@ -1,4 +1,5 @@
 #include "View.h"
+#include <iostream>
 
 View::View(std::shared_ptr<Controller> controller) {
     window.create(sf::VideoMode(600,300), "TicTacToe", sf::Style::Titlebar | sf::Style::Close); 
@@ -13,7 +14,9 @@ View::~View() {
 
 }
 
-
+void View::shit() {
+    std::cout << "SHIT, YO! \n";
+}
 
 //void View::loadSpriteAndTextureInVector()
 
@@ -37,7 +40,6 @@ void View::init() {
     }
 
 void View::draw() {
-
     while (window.isOpen())
     {
         sf::Event event;

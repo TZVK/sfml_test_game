@@ -40,4 +40,5 @@ class View {
         inline sf::Sprite getSpriteFromSign(Sign sign) { return spriteMap.at(sign);}
 
         void draw();
+        void shit();
 };
